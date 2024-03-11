@@ -1,0 +1,67 @@
+.identity-form
+{
+	height: 100%;
+}
+
+.form-identity
+{
+	padding-top: 20px;
+	max-width: 350px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form-identity .form-control
+{
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.form-identity .form-control:focus
+{
+	z-index: 2;
+}
+
+.form-identity input[type="text"]
+{
+	margin-bottom: 8px;
+}
+
+.form-identity input[type="email"]
+{
+	margin-bottom: 8px;
+}
+
+.form-identity input[type="password"]
+{
+	margin-bottom: 8px;
+}
+
+.main-logo
+{
+	max-width: 250px;
+}
+
+.social-login-break
+{
+	padding: 0;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
+.login-btn
+{
+	&__google
+	{
+		background-color: #e6e6e6;
+	}
+
+	&__facebook
+	{
+		background-color: #4267B2;
+		color: white;
+	}
+}

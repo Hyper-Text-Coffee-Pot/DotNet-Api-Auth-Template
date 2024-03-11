@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Bootstrap theme overrides */
+$theme-colors: (
+	"primary": #6667ab
+);
+
+/* https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/ */
+@import "~bootstrap/scss/bootstrap";
+
+// regular style toast
+//@import '~ngx-toastr/toastr';
+
+// bootstrap style toast
+//@import '~ngx-toastr/toastr-bs4-alert';
+
+html,
+body
+{
+	height: 100%;
+	width: 500px;
+	height: 600px;
+}
+
+.lock-scroll
+{
+	overflow-y: hidden !important;
+}
+
+.header-footer-spacer
+{
+	margin: 0;
+	padding: 55px 0 72px 0;
+}
+
+// Custom global scrollbar settings
+/* width */
+::-webkit-scrollbar
+{
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track
+{
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+	background: #888;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+	background: #555;
+}
+
+// /* Shimmer Effect */
+// // https://www.geeksforgeeks.org/shimmer-effect-using-css/
+// // https://codepen.io/umng/pen/xMXXRj
+// .shimmer {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 50%;
+//   height: 100%;
+//   background: linear-gradient(90deg, #f6f7f8 0%, #edeef1 40%, #f6f7f8 80%, #f6f7f8 100%);
+//   z-index: 50;
+
+//   animation: shimmer 1s infinite linear;
+// }
+
+// @keyframes shimmer {
+//   from {
+//     transform: translateX(-200%);
+//   }
+
+//   to {
+//     transform: translateX(200%);
+//   }
+// }
+
+// Dark-mode global styles.
+@media (prefers-color-scheme: dark)
+{}

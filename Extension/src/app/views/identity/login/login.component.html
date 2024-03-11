@@ -1,0 +1,97 @@
+<div class="container-fluid text-center identity-form">
+	<div class="row align-items-center h-100">
+		<div class="col">
+			<form class="form-identity"
+				  [formGroup]="SignInForm"
+				  (ngSubmit)="ProcessSignIn()">
+				<a class="btn btn-link"
+				   routerLink="/"
+				   aria-label="Click to go to the home page">
+					<img class="mb-4 main-logo"
+						 src="/assets/images/logos/main-logo-for-accounts.jpg"
+						 alt="Logo with two polaroids"
+						 width="250"
+						 height="83">
+				</a>
+				<h1 class="h3 mb-3 font-weight-normal">Log in to your account</h1>
+				<div *ngIf="FormError != ''"
+					 class="alert alert-danger">
+					<span>{{FormError}}</span>
+				</div>
+				<label for="signInEmail"
+					   class="visually-hidden">Email address</label>
+				<input type="email"
+					   class="form-control"
+					   name="signInEmail"
+					   id="signInEmail"
+					   autocomplete="off"
+					   aria-describedby="emailHelp"
+					   placeholder="Email address"
+					   formControlName="signInEmail"
+					   required>
+				<div *ngIf="SignInEmail?.invalid && (SignInEmail?.dirty && SignInEmail?.touched)"
+					 class="alert alert-danger">
+					<div *ngIf="SignInEmail.errors.required">
+						Email is required.
+					</div>
+					<div *ngIf="SignInEmail.errors.minLength">
+						Email must be at least 3 characters.
+					</div>
+				</div>
+				<label for="signInPassword"
+					   class="visually-hidden">Password</label>
+				<input type="password"
+					   class="form-control"
+					   name="signInPassword"
+					   id="signInPassword"
+					   autocomplete="off"
+					   aria-describedby="passwordHelp"
+					   placeholder="Password"
+					   formControlName="signInPassword"
+					   required>
+				<div *ngIf="SignInPassword.invalid && (SignInPassword.dirty && SignInPassword.touched)"
+					 class="alert alert-danger">
+					<div *ngIf="SignInPassword.errors.required">
+						Password is required.
+					</div>
+					<div *ngIf="SignInPassword.errors.minLength">
+						Password must be at least 8 characters.
+					</div>
+				</div>
+				<div class="text-left">
+					<a class="btn btn-link"
+					   routerLink="/identity/forgot-password">Forgot your password?</a>
+				</div>
+				<br />
+				<button class="btn btn-lg btn-primary w-100"
+						type="submit"
+						[disabled]="!SignInForm.valid">
+					Log in
+				</button>
+				<p class="text-muted social-login-break">OR</p>
+				<div>
+					<button class="btn btn-light w-100 d-flex align-items-center justify-content-center login-btn__google"
+							type="button"
+							(click)="ProcessSignInWithGoogle()">
+						<img src="/assets/images/social/google.svg"
+							 alt="Google logo icon"
+							 width="20"
+							 height="20"
+							 class="me-2" />
+						Log in with Google
+					</button>
+					<!--<button class="btn btn-light w-100 d-flex align-items-center justify-content-center login-btn__facebook" type="button" (click)="ProcessSignInWithFacebook()">
+						<img src="/assets/images/social/facebook.png" alt="Facebook logo icon" width="20" height="20" class="me-2"/>
+						Log in with Facebook
+					</button>-->
+				</div>
+				<hr />
+				<div>
+					<a class="btn btn-link"
+					   routerLink="/identity/signup">Don't have an account? Sign up</a>
+				</div>
+				<p class="mt-5 mb-3">&copy; {{ CurrentYear }}</p>
+			</form>
+		</div>
+	</div>
+</div>

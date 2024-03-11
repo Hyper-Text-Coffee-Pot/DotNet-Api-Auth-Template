@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarx",
+  "description": "The encrypted bookmark manager.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "bookmarks"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "assets/images/icon128.png"
+    }
+  }
+}

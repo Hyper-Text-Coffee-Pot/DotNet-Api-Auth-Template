@@ -1,0 +1,6 @@
+@Bookmarx.API_HostAddress = http://localhost:5170
+
+GET {{Bookmarx.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
